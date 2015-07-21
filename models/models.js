@@ -5,7 +5,7 @@ var path =require('path');
 // Postgres DATABASE_URL = pstgres://user:passwd@host:port/database
 // SALite   DATABASE_URL = sqlite://:@:/
 
-var url = process.env.RATABASE_URL.match(/(.*)\:\/\/(.*?)\:(.*)@(.*)\:(.*)\/(.*)/);
+var url = process.env.DATABASE_URL.match(/(.*)\:\/\/(.*?)\:(.*)@(.*)\:(.*)\/(.*)/);
 var DB_name   = (url[6]||null);
 var user      = (url[2]||null);
 var pwd       = (url[3]||null);
